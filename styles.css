@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Text', sans-serif;
+}
+
+body{
+    height: 100vh;
+    width: auto;
+    background-color: #1D1E28;
+    background-image: url(./images/pattern-hills.svg), url(./images/bg-stars.svg);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1{
+    color: #FFF;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 6.136px;
+    text-transform: uppercase;
+    width: 327px;
+    margin-top: 142px;
+}
+
+.countdown-container{
+    display: flex;
+    margin-top: 54px;
+    width: auto;
+    gap: 16px;
+}
+
+.days-container,
+.hours-container,
+.minutes-container,
+.seconds-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.box{
+    width: 70px;
+    height: 71px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    line-height: 71px;
+    letter-spacing: -1.08px;
+    color: #FB5E84;
+    font-family: 'Red Hat Text';
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="70" height="71" viewBox="0 0 70 71" fill="none"><rect width="70" height="71" rx="8" fill="%23191A23"/><rect width="70" height="66.2667" rx="4" fill="%23343650"/></svg>') center/cover no-repeat;
+    border-radius: 4px;
+}
+
+.days,
+.hours,
+.seconds,
+.minutes{
+    width: 70px;
+    height: 12px;
+    color: #8385A9;
+    text-align: center;
+    font-family: 'Red Hat Text';
+    font-size: 7px;
+    letter-spacing: 2.959px;
+}
+
+
+.icons{
+    width: 136px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 48px;
+}
+
+
+@media (min-width: 1440px) {
+    h1{
+        width: 431px;
+        font-size: 22px;
+        letter-spacing: 7.5px;
+        margin-top: 132px;
+    }
+
+    .box{
+        width: 148px;
+        height: 150px;
+        font-size: 80px;
+        letter-spacing: -2.4px;
+    }
+
+    .countdown-container{
+        gap: 32px;
+        margin-top: 104px;
+    }
+
+    .days,
+    .hours,
+    .seconds,
+    .minutes{
+        width: 148px;
+        height: 18px;
+        font-size: 14px;
+        letter-spacing: 5.919px;
+    }
+
+    .fb,
+    .ig,
+    .pinterest:hover{
+        filter: drop-shadow(0px 1px 2px #000);
+        cursor: pointer;
+    }
+
+    body{
+        background-size: contain;
+    }
+}
+  
