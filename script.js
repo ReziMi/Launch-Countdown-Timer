@@ -1,9 +1,15 @@
 const today = new Date();  // მიმდინარე დრო
-const targetDate = new Date(today.getTime() + 14 * 24 * 60 * 60 * 1000);  // მიმდინარე დროს ვამატებთ 14 დღეს და ვიღებთ target date-ს
+const targetDate = new Date('2023-12-31T23:59:00');  // მიმდინარე დროს ვამატებთ 14 დღეს და ვიღებთ target date-ს
 
 const countDownDate = targetDate.getTime();  // target date მილიწამებში
 
+countDown();
+
 let x = setInterval(() => {
+    countDown();
+}, 1000);
+
+function countDown(){
     const currentTime = new Date().getTime();  // მიმდინარე დრო მილიწამებში
 
     let distance = countDownDate - currentTime;  // სხვაობა მიზნობრივ და მიმდინარე დროებს შორის
@@ -21,5 +27,5 @@ let x = setInterval(() => {
     if (distance <= 0) {
         // როცა გავა 14 დღე, ჩერდება დათვლა
         clearInterval(x);
-    }
-}, 1000);
+    }   
+}
